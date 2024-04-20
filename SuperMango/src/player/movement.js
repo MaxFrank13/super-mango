@@ -1,11 +1,17 @@
+// TODO: fix key mapping
+// We end up with an idle player that moves in some states
+
 const setUpMovement = (player) => {
   // This is to make sure the correct anim plays while in air and when landing
   // TODO: consider making an "in air" state?
   onKeyPress("left", () => {
-    player.enterState("run");
+    console.log(player.state);
+    if (player.state !== "run") player.enterState("run");
   });
   onKeyPress("right", () => {
-    player.enterState("run");
+    console.log(player.state);
+
+    if (player.state !== "run") player.enterState("run");
   });
 
   // onKeyDown() registers an event that runs every frame as long as user is holding a certain key

@@ -20,24 +20,29 @@ export const setUpPlayerStateMachine = (player) => {
     player.jump();
   });
 
-  // player.onGround(() => {
+  player.onGround(() => {
+    if (!player.isMoving) {
+      player.enterState("idle");
+    } else {
+      player.speed = 50;
+      // TODO: We may need a landed state? Or at least an animation to stall and prevent idle from playing
+      player.enterState("run")
+      wait(0.2, () => player.speed = 250);
+    }
+  })
+  // player.onStateUpdate("falling", () => {
   //   if (player.isGrounded()) {
-  //     if (!player.isMoving) {
-  //       player.enterState("idle");
+  //     if (player.isMoving) {
+  //       player.speed = 50;
+  //       wait(0.2, () => {
+  //         player.enterState("run")
+  //         player.speed = 250;
+  //       });
   //     } else {
-  //       wait(0.2, () => player.enterState("run"));
+  //       player.enterState("idle");
   //     }
   //   }
-  // })
-  player.onStateUpdate("falling", () => {
-    if (player.isGrounded()) {
-      if (!player.isMoving) {
-        player.enterState("idle");
-      } else {
-        wait(0.2, () => player.enterState("run"));
-      }
-    }
-  });
+  // });
 };
 
 export default setUpPlayerStateMachine;

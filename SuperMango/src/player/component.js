@@ -1,4 +1,4 @@
-const playerComponent = (k) => k.add([
+const playerComponent = (k) => k.make([
 	pos(120, 80),
 	sprite("ninja-frog"),
   state("idle", ["idle", "run", "jump", "falling"]),
