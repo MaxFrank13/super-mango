@@ -14,12 +14,8 @@ export const setUpPlayer = (k) => {
   // Set up state machine
   setUpPlayerStateMachine(player);
 
-  player.onUpdate(() => {
+  onUpdate(() => {
     camPos(player.pos);
-    // TODO: is there a better way to do this? This probably shouldn't live here either
-    if (player.isFalling()) {
-      player.enterState("falling");
-    };
   });
 
   // Set up Movement

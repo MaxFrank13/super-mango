@@ -1,17 +1,17 @@
 const playerComponent = (k) => k.make([
-	pos(120, 80),
+	pos(39, 263.5),
 	sprite("ninja-frog"),
   state("idle", ["idle", "run", "jump", "falling"]),
   area({
     shape: new Rect(vec2(10, 8), 14, 24)
   }),
   body({
-    jumpForce: 900,
+    jumpForce: 1000,
   }),
   scale(4),
   "player",
   {
-    speed: 250,
+    speed: 300,
     isMoving: false,
   },
 ]);

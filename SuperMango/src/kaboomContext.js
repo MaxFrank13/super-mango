@@ -1,7 +1,5 @@
 import kaboom from "kaboom";
 
-console.log(document);
-
 const k = kaboom({
   height: 768,
   width: 1024,
