@@ -4,7 +4,7 @@
  "layers":[
         {
          "id":3,
-         "image":"..\/..\/..\/..\/..\/..\/GameDev\/SuperMango\/assets\/Background\/Yellow.png",
+         "image":"..\/..\/..\/..\/GameDev\/SuperMango\/assets\/Background\/Yellow.png",
          "name":"background",
          "opacity":1,
          "repeatx":true,
@@ -122,7 +122,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":304,
+                 "width":144,
                  "x":0,
                  "y":272
                 }, 
@@ -169,6 +169,28 @@
                  "width":16,
                  "x":464,
                  "y":80
+                }, 
+                {
+                 "height":48,
+                 "id":16,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":176,
+                 "y":272
+                }, 
+                {
+                 "height":48,
+                 "id":17,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":256,
+                 "y":272
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -177,7 +199,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":16,
+ "nextobjectid":18,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
@@ -185,7 +207,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"..\/..\/..\/..\/..\/..\/GameDev\/SuperMango\/Terrain (16x16).tsx"
+         "source":"..\/..\/..\/..\/GameDev\/SuperMango\/Terrain (16x16).tsx"
         }],
  "tilewidth":16,
  "type":"map",

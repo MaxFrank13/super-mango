@@ -1,5 +1,4 @@
-// TODO: is this too much extraction? maybe just the config options should live here?
-const loadPlayerSprite = (k) => k.loadSprite("ninja-frog", "sprites//ninja-frog/ninja-frog-spritesheet.png", {
+const playerSpriteConfig = {
   sliceX: 12,
   sliceY: 4,
   anims: {
@@ -22,6 +21,6 @@ const loadPlayerSprite = (k) => k.loadSprite("ninja-frog", "sprites//ninja-frog/
       to: 37,
     },
   },
-});
+};
 
-export default loadPlayerSprite;
+export default playerSpriteConfig;

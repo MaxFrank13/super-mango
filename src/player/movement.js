@@ -9,7 +9,7 @@ const setUpMovement = (player) => {
     player.move(-player.speed, 0);
     player.flipX = true;
   });
-  
+
   onKeyDown("right", () => {
     if (player.curAnim() !== "run" && player.isGrounded()) player.play("run");
     player.isMoving = true
@@ -17,10 +17,10 @@ const setUpMovement = (player) => {
     player.flipX = false;
   });
 
-  // TODO: it is fixed when removing state for run - consider if state machine is necessary for the player - what is it doing for us?
   onKeyRelease(() => {
     if (isKeyReleased("right") || isKeyReleased("left")) {
-      player.enterState("idle");
+      player.isMoving = false;
+      if (player.isGrounded()) player.play("idle");
     }
   });
 };
